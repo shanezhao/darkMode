@@ -1,0 +1,20 @@
+{
+
+    "manifest_version": 2,
+    "name": "Dark Google Search (p)",
+    "version": "1.4",
+  
+    "description": "attempting to make google search dark mode",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.google.com/*"],
+        "js": ["borderify.js"]
+      }
+    ]
+  
+  }
