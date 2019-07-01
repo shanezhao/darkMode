@@ -49,6 +49,8 @@ var appbar = document.getElementById("appbar");
 var exp_outline = document.getElementsByClassName("exp-outline");
 var exp_r = document.getElementsByClassName("exp-r");
 
+var num_gAccordion_objects = gAccordionExpanderTag.length;
+
 if(numInnerCard > 0) {
     for(var i = 0; i<numInnerCard; i++) {
         document.getElementsByTagName("g-inner-card")[i].style.backgroundColor = "#5b5b5b"
@@ -142,6 +144,17 @@ if(exp_r != null) {
 document.getElementById("Wprf1b").style.color = "#c9c9c9"
 
 // aajZCb className for search options
+
+//----attempting to update the bar when new items are added----//
+gAccordionExpanderTag.addEventListener("click", update_gAccordion);
+function update_gAccordion() {
+    if(num_gAccordion_objects < gAccordionExpanderTag.length) {
+        for(var i = num_gAccordion_objects; i<gAccordionExpanderTag.length; i++) {
+            gAccordionExpanderTag[i].style.color = "white";
+        }
+        num_gAccordion_objects = gAccordionExpanderTag.length;
+    }
+}
 
 
 /*
