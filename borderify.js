@@ -46,7 +46,8 @@ var h3_tag = document.getElementsByTagName("h3");
 var h2_tag = document.getElementsByTagName("h2");
 var h1_tag = document.getElementsByTagName("h1");
 var appbar = document.getElementById("appbar");
-
+var exp_outline = document.getElementsByClassName("exp-outline");
+var exp_r = document.getElementsByClassName("exp-r");
 
 if(numInnerCard > 0) {
     for(var i = 0; i<numInnerCard; i++) {
@@ -125,6 +126,18 @@ if(top_stories_cite_tag.length > 0) {
 if(appbar != null) {
     appbar.style.backgroundColor = "#2b2b2b"
 }
+
+if(exp_outline != null) {
+    for(var i = 0; i<exp_outline.length; i++) {
+        exp_outline[i].style.backgroundColor = "#454545"
+    }
+}
+if(exp_r != null) {
+    for(var i = 0; i<exp_r.length; i++) {
+        exp_r[i].style.color = "#99aeff"
+    }
+}
+
 //ID for location at the bottom of the search page
 document.getElementById("Wprf1b").style.color = "#c9c9c9"
 
