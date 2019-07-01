@@ -48,6 +48,8 @@ var h1_tag = document.getElementsByTagName("h1");
 var appbar = document.getElementById("appbar");
 var exp_outline = document.getElementsByClassName("exp-outline");
 var exp_r = document.getElementsByClassName("exp-r");
+var related_question_pair = document.getElementsByClassName("related-question-pair");
+
 
 var num_gAccordion_objects = gAccordionExpanderTag.length;
 
@@ -146,13 +148,19 @@ document.getElementById("Wprf1b").style.color = "#c9c9c9"
 // aajZCb className for search options
 
 //----attempting to update the bar when new items are added----//
-gAccordionExpanderTag.addEventListener("click", update_gAccordion);
-function update_gAccordion() {
-    if(num_gAccordion_objects < gAccordionExpanderTag.length) {
-        for(var i = num_gAccordion_objects; i<gAccordionExpanderTag.length; i++) {
-            gAccordionExpanderTag[i].style.color = "white";
-        }
-        num_gAccordion_objects = gAccordionExpanderTag.length;
+var num = related_question_pair.length;
+for(var i=0; i<num; i++) {
+    related_question_pair[i].addEventListener("mouseover", update_gAccordion_color);
+    related_question_pair[i].addEventListener("mouseout", update_gAccordion_color);
+}
+function update_gAccordion_color() {
+    numOfElements = related_question_pair.length;
+    for(var i = numOfElements-4; i<related_question_pair.length; i++) {
+        related_question_pair[i].style.color = "white";
+    }
+    for(var i = numOfElements-4; i<numOfElements; i++) {
+        related_question_pair[i].addEventListener("mouseover", update_gAccordion_color);
+        related_question_pair[i].addEventListener("mouseout", update_gAccordion_color);
     }
 }
 
