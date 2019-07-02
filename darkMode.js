@@ -132,14 +132,24 @@ if(appbar != null) {
 }
 
 if(exp_outline != null) {
+    for(let e of exp_outline) {
+        e.style.backgroundColor = "#454545";
+    }
+    /* ---below also works for IE and older broswers---
     for(var i = 0; i<exp_outline.length; i++) {
         exp_outline[i].style.backgroundColor = "#454545"
     }
+    */
 }
 if(exp_r != null) {
+    for(let e of exp_r) {
+        e.style.color = "#99aeff";
+    }
+    /*
     for(var i = 0; i<exp_r.length; i++) {
         exp_r[i].style.color = "#99aeff"
     }
+    */
 }
 
 //ID for location at the bottom of the search page
