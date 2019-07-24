@@ -157,6 +157,16 @@ document.getElementById("Wprf1b").style.color = "#c9c9c9"
 
 // aajZCb className for search options
 
+//
+var alsoSearchFor = document.getElementsByClassName("bkWMgd");
+alsoSearchFor[0].addEventListener('mouseenter', e => {
+    if(exp_r != null){
+        for(let e of exp_r) {
+            e.style.color = "#c9daff";
+        }
+    }
+});
+
 //----attempting to update the bar when new items are added----//
 var num = related_question_pair.length;
 for(var i=0; i<num; i++) {
